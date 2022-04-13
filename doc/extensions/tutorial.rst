@@ -123,7 +123,7 @@ Creating a plugin class
    extension's features.
 
 
-``cookiecutter`` should have created the following file file
+``cookiecutter`` should have created the following file
 ``ckanext-iauthfunctions/ckanext/iauthfunctions/plugin.py``.
 Edit it to match the following:
 
@@ -137,7 +137,10 @@ in this example, that inherits from CKAN's
 .. note::
 
    Every CKAN plugin class should inherit from
-   :py:class:`~ckan.plugins.core.SingletonPlugin`.
+   :py:class:`~ckan.plugins.core.SingletonPlugin`. 
+   You are not required to follow this step, 
+   since ``cookiecutter`` and ``ckan generate extension`` commands
+   reflect the above changes automatically.
 
 
 .. _setup.py:
@@ -157,7 +160,13 @@ the ``entry_points`` section like this::
         example_iauthfunctions=ckanext.iauthfunctions.plugin:ExampleIAuthFunctionsPlugin
     ''',
 
+.. note::
 
+    You are not required to follow this step
+    since ``cookiecutter`` and ``ckan generate extension`` commands
+    reflect the above changes automatically.
+    
+    
 Installing the extension
 ========================
 
